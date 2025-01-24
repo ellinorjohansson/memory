@@ -31,8 +31,7 @@ Install memory locally with npm
 
 ```bash
 # Clone this repository
-$ git clone [https://github.com/länken-till-repo](https://github.com/ellinorjohansson/memory)
-
+$ git clone https://github.com/ellinorjohansson/memory
 # Go into the repository
 $ cd memory
 
