@@ -15,7 +15,7 @@ let matches: number = 0;
 startMemory.addEventListener('click', startGame);
 
 // Spela igen-knappen
-restartButton.addEventListener('click', startGame); // När användaren klickar på spela igen, starta om spelet
+restartButton.addEventListener('click', startGame); 
 
 // Startar spelet
 function startGame() {
@@ -23,7 +23,7 @@ function startGame() {
   const shuffledCards = shuffle(cards); // Blanda korten
   createGameGrid(shuffledCards); // Skapa spelplanen
   startMemory.style.display = "none"; // Dölj startknappen
-  restartButton.style.display = "none"; // Dölj spela igen-knappen när spelet startar om
+  restartButton.style.display = "none"; // Dölj spela igen knappen när spelet startar om
   resultMessage.classList.add('hidden'); // Dölj resultatmeddelandet
   matches = 0; // Återställ antal matchningar
 }
@@ -38,7 +38,7 @@ function createGameGrid(shuffledCards: IPlaycards[]) {
   shuffledCards.forEach((card) => {
     const cardElement = document.createElement('div');
     cardElement.classList.add('memory-card');
-    cardElement.dataset.value = card.name; // Lägg till kortets värde för jämförelse
+    cardElement.dataset.value = card.name; 
 
     cardElement.innerHTML = ` 
       <div class="front"></div>
@@ -59,7 +59,6 @@ function handleCardClick(event: MouseEvent) {
     return;
   }
 
-  // Vänd kortet
   flipCard(clickedCard);
 
   if (!firstCard) {
@@ -71,7 +70,6 @@ function handleCardClick(event: MouseEvent) {
   // Spara det andra kortet
   secondCard = clickedCard;
 
-  // Kontrollera om korten matchar
   checkForMatch();
 }
 
@@ -97,8 +95,8 @@ function checkForMatch() {
     if (matches === cards.length / 2) {
       setTimeout(() => {
         resultMessage.textContent = 'Du klarade spelet! 🎉';
-        resultMessage.classList.remove('hidden'); // Visa meddelandet
-        restartButton.style.display = "block"; // Visa spela igen-knappen
+        resultMessage.classList.remove('hidden'); 
+        restartButton.style.display = "block"; 
       }, 500);
     }    
   } else {
