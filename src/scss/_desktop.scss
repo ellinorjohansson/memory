@@ -1,0 +1,26 @@
+body {
+  background-color: $secondary-bg; 
+}
+
+main {
+  padding: 20px;
+}
+
+.memory-card {
+  width: 115px; 
+  height: 195px;
+}
+
+.start-button {
+  font-size: 2rem;
+  padding: 10px 20px;
+}
+
+.result-message {
+  font-size: 1.8rem;
+}
+
+.play-again-style {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+}

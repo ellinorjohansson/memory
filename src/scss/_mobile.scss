@@ -1,0 +1,123 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $primary-bg;
+}
+
+main {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: $secondary-bg;
+}
+
+.memory-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.start-button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: $button-text-color;
+  border-radius: 25px;
+  border: 2px solid $button-bg;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $button-bg;
+    color: #fff;
+    transform: scale(1.1);
+  }
+}
+
+.memory-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.memory-card {
+  width: 100px;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.memory-card .front,
+.memory-card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.memory-card .front {
+  background-color: $card-front;
+}
+
+.memory-card .back {
+  background-color: $card-back;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: $text-color;
+  transform: rotateY(180deg);
+}
+
+.memory-card.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.memory-card.flipped .back {
+  transform: rotateY(0deg);
+}
+
+.hidden {
+  display: none;
+}
+
+.result-message {
+  color: $result-message-color;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.play-again {
+  display: none;
+}
+
+.play-again-style {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: $button-text-color;
+  border-radius: 25px;
+  border: 2px solid $button-bg;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $button-bg;
+    color: #fff;
+  }
+}
